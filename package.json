@@ -1,0 +1,23 @@
+{
+  "name": "generator-readme",
+  "version": "1.0.0",
+  "description": "An application I've created using node.js to generate a README.md file based on user input.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexWilsonNC/generator-readme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexWilsonNC/generator-readme/issues"
+  },
+  "homepage": "https://github.com/AlexWilsonNC/generator-readme#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
+}
