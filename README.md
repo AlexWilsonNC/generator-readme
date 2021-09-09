@@ -1,7 +1,8 @@
-# Generator
+# aLEX
 
+MIT
 ## Description
-This is a descrition.
+SFDGSF
 
 ## Table of Contents
 - [Installation](#installation)
@@ -11,22 +12,25 @@ This is a descrition.
 - [Questions](#questions)
 
 ## Installation
-nothing
+NOTHING
 
 ## Usage
-nope
+NOPE
 
 ## Guidelines
 [Rules to Follow - "Contributor Covenant"](https://www.contributor-covenant.org/)
 
 ## Tests
+SDF
 
+## License
+MIT
 
 ## Questions
-For your convinience, the developer's Github account is provided below.
+For your convenience, the developer's Github account is provided below.
 
-[Github Profile](https://github.com/AlexWilsonNC)
+[Github Profile](https://github.com/)
 
 For further questions, you may reach out via the following email.
 
-alexwilson0017@yahoo.com
+DF

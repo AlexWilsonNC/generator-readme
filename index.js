@@ -13,17 +13,17 @@ inquirer.prompt([
         message: 'Type out a description for this application.'
     },
     {   name: 'license', 
-        type: 'checkbox',
+        type: 'rawlist',
         message: 'Choose one license for the application.',
-        choices: ['a', 'b', 'c', 'd']
+        choices: ['MIT', 'ISC', 'Mozilla']
     },
     {   name: 'installation',
-        type: 'input',  // change?
+        type: 'input',
         message: 'What is required to install your project?'
     },
     { 
-        name: 'instructions', 
-        type: 'input', // have options to include 1 instruction at a time, add more until selected no
+        name: 'usage', 
+        type: 'input',
         message: 'Any special instructions to use this?'
     },
     {
@@ -43,12 +43,15 @@ inquirer.prompt([
     },
 
 ]).then((answers) => {
-    const data = answers.licenses.map(license => `- ${license}`).join('\n'); // ${data}
+    if (answers.license.includes('MIT') {
+        '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+    }
 
     const template = 
-
 `# ${answers.title}
 
+License that explains which license the application is covered under:
+${answers.license}
 ## Description
 ${answers.description}
 
@@ -60,10 +63,11 @@ ${answers.description}
 - [Questions](#questions)
 
 ## Installation
+Step(s) required to install application.
 ${answers.installation}
 
 ## Usage
-${answers.instructions}
+${answers.usage}
 
 ## Guidelines
 [Rules to Follow - "Contributor Covenant"](https://www.contributor-covenant.org/)
@@ -71,11 +75,8 @@ ${answers.instructions}
 ## Tests
 ${answers.tests}
 
-## License
-${answers.license}
-
 ## Questions
-For your convinience, the developer's Github account is provided below.\n
+For your convenience, the developer's Github account is provided below.\n
 [Github Profile](https://github.com/${answers.username})
 
 For further questions, you may reach out via the following email.\n
