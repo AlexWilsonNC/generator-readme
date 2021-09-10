@@ -1,8 +1,10 @@
-# aLEX
+# sdfdsf
 
-MIT
+License that explains which license the application is covered under:
+
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 ## Description
-SFDGSF
+sdfsdf
 
 ## Table of Contents
 - [Installation](#installation)
@@ -12,25 +14,25 @@ SFDGSF
 - [Questions](#questions)
 
 ## Installation
-NOTHING
+Step(s) required to install application.
+- VS Code
+- Chrome
+- node.js
 
 ## Usage
-NOPE
+Must use xczxcc
 
 ## Guidelines
 [Rules to Follow - "Contributor Covenant"](https://www.contributor-covenant.org/)
 
 ## Tests
-SDF
-
-## License
-MIT
+sdfsdfsd
 
 ## Questions
 For your convenience, the developer's Github account is provided below.
 
-[Github Profile](https://github.com/)
+[Github Profile](https://github.com/sdfsdf)
 
 For further questions, you may reach out via the following email.
 
-DF
+sdfsdf

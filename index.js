@@ -18,18 +18,19 @@ inquirer.prompt([
         choices: ['MIT', 'ISC', 'Mozilla']
     },
     {   name: 'installation',
-        type: 'input',
-        message: 'What is required to install your project?'
+        type: 'checkbox',
+        message: 'What is required to install your project?',
+        choices: ['VS Code', 'Github', 'Chrome', 'node.js', ]
     },
     { 
         name: 'usage', 
         type: 'input',
-        message: 'Any special instructions to use this?'
+        message: 'Any special instructions to use this application?'
     },
     {
         name: 'tests',
         type: 'input',
-        message: 'asd' // idk
+        message: 'Describe an example test you would like a user to try in your project.'
     },
     {
         name: 'username',
@@ -43,15 +44,23 @@ inquirer.prompt([
     },
 
 ]).then((answers) => {
-    if (answers.license.includes('MIT') {
-        '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-    }
+    let license
+    if (answers.license.includes('MIT')) {
+        license = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+    } if (answers.license.includes('ISC')) {
+        license = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)';
+    } if (answers.license.includes('Mozilla')) {
+        license = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+    };
+
+    const installReqs = answers.installation.map(install => `- ${install}`).join('\n');
 
     const template = 
 `# ${answers.title}
 
 License that explains which license the application is covered under:
-${answers.license}
+
+${license}
 ## Description
 ${answers.description}
 
@@ -63,11 +72,11 @@ ${answers.description}
 - [Questions](#questions)
 
 ## Installation
-Step(s) required to install application.
-${answers.installation}
+necessities to use, run, or download application.
+${installReqs}
 
 ## Usage
-${answers.usage}
+Must use ${answers.usage}
 
 ## Guidelines
 [Rules to Follow - "Contributor Covenant"](https://www.contributor-covenant.org/)
