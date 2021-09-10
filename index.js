@@ -92,7 +92,7 @@ For further questions, you may reach out via the following email.\n
 ${answers.email}
 `;
 
-fs.writeFile('README.md', template, (error) => {
+fs.writeFile('SAMPLE.md', template, (error) => {
         if (error) console.log(error);
         console.log('Success, view the README.');
     })
