@@ -53,12 +53,12 @@ inquirer.prompt([
         license = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
     };
 
-    const installReqs = answers.installation.map(install => `- ${install}`).join('\n');
+    const installReqs = answers.installation.map(install => `- ${install}`).join('\n')
 
     const template = 
 `# ${answers.title}
 
-License that explains which license the application is covered under:
+License that explains in which the application is covered under:
 
 ${license}
 ## Description
@@ -72,11 +72,11 @@ ${answers.description}
 - [Questions](#questions)
 
 ## Installation
-necessities to use, run, or download application.
+Necessities to use, run, or download application.
 ${installReqs}
 
 ## Usage
-Must use ${answers.usage}
+${answers.usage}
 
 ## Guidelines
 [Rules to Follow - "Contributor Covenant"](https://www.contributor-covenant.org/)
@@ -94,6 +94,6 @@ ${answers.email}
 
 fs.writeFile('README.md', template, (error) => {
         if (error) console.log(error);
-        console.log('Success');
+        console.log('Success, view the README.');
     })
 });
